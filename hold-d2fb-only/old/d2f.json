@@ -1,0 +1,29 @@
+[
+  [ {"children": [], "connections": [], "id":"cell_10", "inputs": [], "name":"diagram parser", "outputs": [], "synccode":""} ],
+  [ {"children": [], "connections": [], "id":"cell_14", "inputs": [], "name":"syle expander", "outputs": [], "synccode":""} ],
+  [ {"children": [], "connections": [], "id":"cell_18", "inputs": [], "name":"as factbase", "outputs": [], "synccode":""} ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_22",
+      "inputs": [],
+      "name":"delete blank lines",
+      "outputs": [],
+      "synccode":""
+    }
+  ],
+  [ {"children": [], "connections": [], "id":"cell_26", "inputs": [], "name":"sort for PROLOG", "outputs": [], "synccode":""} ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_30",
+      "inputs": [],
+      "name":"delete trailing sugar",
+      "outputs": [],
+      "synccode":""
+    }
+  ],
+  [ {"children": [], "connections": [], "id":"cell_6", "inputs": [], "name":"uncompress", "outputs": [], "synccode":""} ]
+]

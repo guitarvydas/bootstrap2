@@ -1,0 +1,5 @@
+[
+  [ {"children": [], "connections": [], "id":"cell_11", "inputs": [], "name":"world", "outputs": [], "synccode":""} ],
+  [ {"children": [], "connections": [], "id":"cell_6", "inputs": [], "name":"helloworld", "outputs": [], "synccode":""} ],
+  [ {"children": [], "connections": [], "id":"cell_7", "inputs": [], "name":"uncompress", "outputs": [], "synccode":""} ]
+]

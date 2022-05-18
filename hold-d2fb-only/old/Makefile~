@@ -1,0 +1,5 @@
+prep=./prep/prep
+support=--support=$d2fdir/support.js
+
+all:
+	$prep '.' '$' $d2fdir/drawio.ohm $d2fdir/drawio.fmt --stop=1 ${support}

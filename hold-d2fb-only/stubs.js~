@@ -1,0 +1,11 @@
+function diagramparser (xml) {
+    return xml;
+}
+
+function asfactbase (xml1) {
+    return xml1;
+}
+
+function deleteblanklines (text) {
+    return text;
+}

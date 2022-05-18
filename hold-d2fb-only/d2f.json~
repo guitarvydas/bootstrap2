@@ -1,0 +1,119 @@
+[
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_15",
+      "inputs": ["in" ],
+      "name":"diagramparser",
+      "outputs": ["out" ],
+      "synccode":"var x = diagramparser (message.in);&lt;br&gt;this.send (&quot;out&quot;, x);&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_24",
+      "inputs": ["in" ],
+      "name":"asfactbase",
+      "outputs": ["out" ],
+      "synccode":"var x = asfactbase (message.in);&lt;br&gt;this.send (&quot;out&quot;, x);&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_29",
+      "inputs": ["in" ],
+      "name":"deleteblanklines",
+      "outputs": ["out" ],
+      "synccode":"var x = deleteblanklines (message.in);&lt;br&gt;this.send (&quot;out&quot;, x);&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_34",
+      "inputs": ["in" ],
+      "name":"sortForPROLOG",
+      "outputs": ["out" ],
+      "synccode":"var x = sortForPROLOG (message.in);&lt;br&gt;this.send (&quot;out&quot;, x);&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_39",
+      "inputs": ["in" ],
+      "name":"deleteTrailingSugar",
+      "outputs": [],
+      "synccode":"var x = deleteTrailingSugart (message.in);&lt;br&gt;this.send (&quot;out&quot;, x);&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ],
+  [
+    {
+      "children": ["diagramparser", "asfactbase", "deleteblanklines", "sortForPROLOG", "deleteTrailingSugar", "styleexpander", "uncompress" ],
+      "connections": [
+	{
+	  "receivers": [ {"receiver": {"component":"diagramparser", "port":"in"}} ],
+	  "senders": [ {"sender": {"component":"uncompress", "port":"out"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"uncompress", "port":"in"}} ],
+	  "senders": [ {"sender": {"component":"d2f", "port":"in"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"styleexpander", "port":"in"}} ],
+	  "senders": [ {"sender": {"component":"diagramparser", "port":"out"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"asfactbase", "port":"in"}} ],
+	  "senders": [ {"sender": {"component":"styleexpander", "port":"out"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"deleteblanklines", "port":"in"}} ],
+	  "senders": [ {"sender": {"component":"asfactbase", "port":"out"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"sortForPROLOG", "port":"in"}} ],
+	  "senders": [ {"sender": {"component":"deleteblanklines", "port":"out"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"deleteTrailingSugar", "port":"in"}} ],
+	  "senders": [ {"sender": {"component":"sortForPROLOG", "port":"out"}} ]
+	}
+      ],
+      "id":"cell_6",
+      "inputs": ["in" ],
+      "name":"d2f",
+      "outputs": [],
+      "synccode":""
+    }
+  ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_7",
+      "inputs": ["in" ],
+      "name":"styleexpander",
+      "outputs": ["out" ],
+      "synccode":"var x = stylexpander (message.in);&lt;br&gt;this.send (&quot;out&quot;, x);&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_8",
+      "inputs": ["in" ],
+      "name":"uncompress",
+      "outputs": ["out" ],
+      "synccode":"var u = uncompress (message.in);&lt;br&gt;this.send (&quot;out&quot;, u);&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ]
+]

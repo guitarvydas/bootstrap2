@@ -1,0 +1,391 @@
+[
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_100",
+      "inputs": ["in" ],
+      "name":"prolog_convert_to_json",
+      "outputs": ["out" ],
+      "synccode":"var x = sfprolog2json (message.data);&lt;br&gt;me.send (&quot;out&quot;, x, message);&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_103",
+      "inputs": ["in" ],
+      "name":"finish",
+      "outputs": [],
+      "synccode":"// console.log (message.data);&lt;br&gt;done ();&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_108",
+      "inputs": ["in" ],
+      "name":"edge_containment_new",
+      "outputs": ["out" ],
+      "synccode":"var x = sfedgecontainment_new (message.data);&lt;br&gt;me.send (&quot;out&quot;, x, message);&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_113",
+      "inputs": ["in" ],
+      "name":"direct_containment",
+      "outputs": ["out" ],
+      "synccode":"var x = sfdirectcontainment (message.data);&lt;br&gt;me.send (&quot;out&quot;, x, message);&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_118",
+      "inputs": ["in" ],
+      "name":"probeFBd2f",
+      "outputs": ["out" ],
+      "synccode":"var x = sfprobeFBd2f (message.data);&lt;br&gt;me.send (&quot;out&quot;, x, message);&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_13",
+      "inputs": ["in" ],
+      "name":"diagramparser",
+      "outputs": ["out" ],
+      "synccode":"var x = sfdiagramparser (message.data);&lt;br&gt;me.send (&quot;out&quot;, x, message);&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_22",
+      "inputs": ["in" ],
+      "name":"asfactbase",
+      "outputs": ["out" ],
+      "synccode":"var x = sfasfactbase (message.data);&lt;br&gt;me.send (&quot;out&quot;, x, message);&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_27",
+      "inputs": ["in" ],
+      "name":"deleteblanklines",
+      "outputs": ["out" ],
+      "synccode":"var x = sfdeleteblanklines (message.data);&lt;br&gt;me.send (&quot;out&quot;, x, message);&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_32",
+      "inputs": ["in" ],
+      "name":"sortForPROLOG",
+      "outputs": ["out" ],
+      "synccode":"var x = sfsortForPROLOG (message.data);&lt;br&gt;me.send (&quot;out&quot;, x, message);&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_37",
+      "inputs": ["in" ],
+      "name":"deleteTrailingSugar",
+      "outputs": ["out" ],
+      "synccode":"var x = sfdeleteTrailingSugar (message.data);&lt;br&gt;me.send (&quot;out&quot;, x, message);&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_40",
+      "inputs": [],
+      "name":"kickStart",
+      "outputs": ["out" ],
+      "synccode":"var rawbinary = sfreadfile (argv._[0]);&lt;br&gt;me.send (&quot;out&quot;, rawbinary, null);&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_46",
+      "inputs": ["in" ],
+      "name":"kinds",
+      "outputs": ["out" ],
+      "synccode":"var x = sfkinds (message.data);&lt;br&gt;me.send (&quot;out&quot;, x, message);&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_51",
+      "inputs": ["in" ],
+      "name":"name",
+      "outputs": ["out" ],
+      "synccode":"var x = sfnames (message.data);&lt;br&gt;me.send (&quot;out&quot;, x, message);&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_56",
+      "inputs": ["in" ],
+      "name":"color",
+      "outputs": ["out" ],
+      "synccode":"var x = sfcolor (message.data);&lt;br&gt;me.send (&quot;out&quot;, x, message);&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ],
+  [
+    {
+      "children": [
+	"prolog_convert_to_json",
+	"finish",
+	"edge_containment_new",
+	"direct_containment",
+	"probeFBd2f",
+	"diagramparser",
+	"asfactbase",
+	"deleteblanklines",
+	"sortForPROLOG",
+	"deleteTrailingSugar",
+	"kickStart",
+	"kinds",
+	"name",
+	"color",
+	"boundingbox",
+	"direction",
+	"styleexpander",
+	"contains",
+	"contains_port",
+	"uncompress",
+	"indirect_containment",
+	"sync_code",
+	"connections",
+	"design_rule_edge_containment"
+      ],
+      "connections": [
+	{
+	  "receivers": [ {"receiver": {"component":"diagramparser", "port":"in"}} ],
+	  "senders": [ {"sender": {"component":"uncompress", "port":"out"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"finish", "port":"in"}} ],
+	  "senders": [ {"sender": {"component":"prolog_convert_to_json", "port":"out"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"sync_code", "port":"in"}} ],
+	  "senders": [ {"sender": {"component":"edge_containment_new", "port":"out"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"edge_containment_new", "port":"in"}} ],
+	  "senders": [ {"sender": {"component":"direct_containment", "port":"out"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"kinds", "port":"in"}} ],
+	  "senders": [ {"sender": {"component":"probeFBd2f", "port":"out"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"styleexpander", "port":"in"}} ],
+	  "senders": [ {"sender": {"component":"diagramparser", "port":"out"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"asfactbase", "port":"in"}} ],
+	  "senders": [ {"sender": {"component":"styleexpander", "port":"out"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"deleteblanklines", "port":"in"}} ],
+	  "senders": [ {"sender": {"component":"asfactbase", "port":"out"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"sortForPROLOG", "port":"in"}} ],
+	  "senders": [ {"sender": {"component":"deleteblanklines", "port":"out"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"deleteTrailingSugar", "port":"in"}} ],
+	  "senders": [ {"sender": {"component":"sortForPROLOG", "port":"out"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"uncompress", "port":"in"}} ],
+	  "senders": [ {"sender": {"component":"kickStart", "port":"out"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"probeFBd2f", "port":"in"}} ],
+	  "senders": [ {"sender": {"component":"deleteTrailingSugar", "port":"out"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"name", "port":"in"}} ],
+	  "senders": [ {"sender": {"component":"kinds", "port":"out"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"color", "port":"in"}} ],
+	  "senders": [ {"sender": {"component":"name", "port":"out"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"boundingbox", "port":"in"}} ],
+	  "senders": [ {"sender": {"component":"color", "port":"out"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"direction", "port":"in"}} ],
+	  "senders": [ {"sender": {"component":"boundingbox", "port":"out"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"contains", "port":"in"}} ],
+	  "senders": [ {"sender": {"component":"direction", "port":"out"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"contains_port", "port":"in"}} ],
+	  "senders": [ {"sender": {"component":"contains", "port":"out"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"indirect_containment", "port":"in"}} ],
+	  "senders": [ {"sender": {"component":"contains_port", "port":"out"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"direct_containment", "port":"in"}} ],
+	  "senders": [ {"sender": {"component":"indirect_containment", "port":"out"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"connections", "port":"in"}} ],
+	  "senders": [ {"sender": {"component":"sync_code", "port":"out"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"prolog_convert_to_json", "port":"in"}} ],
+	  "senders": [ {"sender": {"component":"connections", "port":"out"}} ]
+	}
+      ],
+      "id":"cell_6",
+      "inputs": [],
+      "name":"whole",
+      "outputs": [],
+      "synccode":""
+    }
+  ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_61",
+      "inputs": ["in" ],
+      "name":"boundingbox",
+      "outputs": ["out" ],
+      "synccode":"var x = sfboundingbox (message.data);&lt;br&gt;me.send (&quot;out&quot;, x, message);&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_66",
+      "inputs": ["in" ],
+      "name":"direction",
+      "outputs": ["out" ],
+      "synccode":"var x = sfdirection (message.data);&lt;br&gt;me.send (&quot;out&quot;, x, message);&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_7",
+      "inputs": ["in" ],
+      "name":"styleexpander",
+      "outputs": ["out" ],
+      "synccode":"var x = sfstyleexpander (message.data);&lt;br&gt;me.send (&quot;out&quot;, x, message);&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_71",
+      "inputs": ["in" ],
+      "name":"contains",
+      "outputs": ["out" ],
+      "synccode":"var x = sfcontains (message.data);&lt;br&gt;me.send (&quot;out&quot;, x, message);&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_76",
+      "inputs": ["in" ],
+      "name":"contains_port",
+      "outputs": ["out" ],
+      "synccode":"var x = sfcontainsport (message.data);&lt;br&gt;me.send (&quot;out&quot;, x, message);&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_8",
+      "inputs": ["in" ],
+      "name":"uncompress",
+      "outputs": ["out" ],
+      "synccode":"var u = sfuncompress (message.data);&lt;br&gt;me.send (&quot;out&quot;, u, message);&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_81",
+      "inputs": ["in" ],
+      "name":"indirect_containment",
+      "outputs": ["out" ],
+      "synccode":"var x = sfindirectcontainment (message.data);&lt;br&gt;me.send (&quot;out&quot;, x, message);&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_86",
+      "inputs": ["in" ],
+      "name":"sync_code",
+      "outputs": ["out" ],
+      "synccode":"var x = sfsynccode (message.data);&lt;br&gt;me.send (&quot;out&quot;, x, message);&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_91",
+      "inputs": ["in" ],
+      "name":"connections",
+      "outputs": ["out" ],
+      "synccode":"var x = sfconnections (message.data);&lt;br&gt;me.send (&quot;out&quot;, x, message);&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_96",
+      "inputs": ["in" ],
+      "name":"design_rule_edge_containment",
+      "outputs": ["out" ],
+      "synccode":"var x = sfdesignruleedgecontainment (message.data);&lt;br&gt;me.send (&quot;out&quot;, x, message);&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ]
+]

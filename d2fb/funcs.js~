@@ -1,0 +1,32 @@
+
+function diagramparser (xml) {
+    return xml;
+}
+
+function asfactbase (xml1) {
+    return xml1;
+}
+
+function deleteblanklines (text) {
+    return text;
+}
+
+function sortForPROLOG (text) {
+    return text;
+}
+
+function deleteTrailingSugar (text) {
+    return text;
+}
+
+function styleexpander (xml) {
+    return xml;
+}
+
+function uncompress (rawdrawio) {
+    var data = atob (rawdrawio);
+    var inf = pako.inflateRaw (
+	Uint8Array.from (data, c=>c.charCodeAt (0)), {to: 'string'})
+    var str = decodeURIComponent (inf);
+    return str;
+}

@@ -1,0 +1,155 @@
+[
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_13",
+      "inputs": ["in" ],
+      "name":"diagramparser",
+      "outputs": ["out" ],
+      "synccode":"var x = sfdiagramparser (message.data);&lt;br&gt;me.send (&quot;out&quot;, x, message);&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_22",
+      "inputs": ["in" ],
+      "name":"asfactbase",
+      "outputs": ["out" ],
+      "synccode":"var x = sfasfactbase (message.data);&lt;br&gt;me.send (&quot;out&quot;, x, message);&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_27",
+      "inputs": ["in" ],
+      "name":"deleteblanklines",
+      "outputs": ["out" ],
+      "synccode":"var x = sfdeleteblanklines (message.data);&lt;br&gt;me.send (&quot;out&quot;, x, message);&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_32",
+      "inputs": ["in" ],
+      "name":"sortForPROLOG",
+      "outputs": ["out" ],
+      "synccode":"var x = sfsortForPROLOG (message.data);&lt;br&gt;me.send (&quot;out&quot;, x, message);&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_37",
+      "inputs": ["in" ],
+      "name":"deleteTrailingSugar",
+      "outputs": ["out" ],
+      "synccode":"var x = sfdeleteTrailingSugar (message.data);&lt;br&gt;me.send (&quot;out&quot;, x, message);&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_40",
+      "inputs": [],
+      "name":"kickStart",
+      "outputs": ["out" ],
+      "synccode":"var rawbinary = sfreadfile (argv._[0]);&lt;br&gt;me.send (&quot;out&quot;, rawbinary, null);&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_46",
+      "inputs": ["in" ],
+      "name":"finish",
+      "outputs": [],
+      "synccode":"console.log (message.data);&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ],
+  [
+    {
+      "children": [
+	"diagramparser",
+	"asfactbase",
+	"deleteblanklines",
+	"sortForPROLOG",
+	"deleteTrailingSugar",
+	"kickStart",
+	"finish",
+	"styleexpander",
+	"uncompress"
+      ],
+      "connections": [
+	{
+	  "receivers": [ {"receiver": {"component":"diagramparser", "port":"in"}} ],
+	  "senders": [ {"sender": {"component":"uncompress", "port":"out"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"styleexpander", "port":"in"}} ],
+	  "senders": [ {"sender": {"component":"diagramparser", "port":"out"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"asfactbase", "port":"in"}} ],
+	  "senders": [ {"sender": {"component":"styleexpander", "port":"out"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"deleteblanklines", "port":"in"}} ],
+	  "senders": [ {"sender": {"component":"asfactbase", "port":"out"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"sortForPROLOG", "port":"in"}} ],
+	  "senders": [ {"sender": {"component":"deleteblanklines", "port":"out"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"deleteTrailingSugar", "port":"in"}} ],
+	  "senders": [ {"sender": {"component":"sortForPROLOG", "port":"out"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"uncompress", "port":"in"}} ],
+	  "senders": [ {"sender": {"component":"kickStart", "port":"out"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"finish", "port":"in"}} ],
+	  "senders": [ {"sender": {"component":"deleteTrailingSugar", "port":"out"}} ]
+	}
+      ],
+      "id":"cell_6",
+      "inputs": [],
+      "name":"bootstrap",
+      "outputs": [],
+      "synccode":""
+    }
+  ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_7",
+      "inputs": ["in" ],
+      "name":"styleexpander",
+      "outputs": ["out" ],
+      "synccode":"var x = sfstyleexpander (message.data);&lt;br&gt;me.send (&quot;out&quot;, x, message);&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ],
+  [
+    {
+      "children": [],
+      "connections": [],
+      "id":"cell_8",
+      "inputs": ["in" ],
+      "name":"uncompress",
+      "outputs": ["out" ],
+      "synccode":"var u = sfuncompress (message.data);&lt;br&gt;me.send (&quot;out&quot;, u, message);&lt;br&gt;&lt;div&gt;&lt;/div&gt;"
+    }
+  ]
+]

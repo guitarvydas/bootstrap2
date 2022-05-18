@@ -1,0 +1,11 @@
+
+
+function main () {
+    argv = require('yargs/yargs')(process.argv.slice(2)).argv;
+    console.log (argv);
+    var d = new d2f (null, "d2f top");
+    d.inject ("in", argv[0]);
+}    
+
+
+main ();
