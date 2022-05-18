@@ -1157,8 +1157,8 @@ function design_rule_edge_containment (container, instancename) {
 }
 
 
-const queryDirectory = "/Users/tarvydas/quicklisp/local-projects/bootstrap/d2fb/das2f/";
-const jsondir = "/Users/tarvydas/quicklisp/local-projects/bootstrap/d2fb/das2j/";
+const queryDirectory = "/Users/tarvydas/quicklisp/local-projects/bootstrap2/diagram2json/das2f/";
+const jsondir = "/Users/tarvydas/quicklisp/local-projects/bootstrap2/diagram2json/das2j/";
 
 function sfdiagramparser (xml) {
 //     | $prep '.' '$' $d2fdir/diagram.ohm $d2fdir/diagram.glue --stop=1 --support=$d2fdir/support.js \

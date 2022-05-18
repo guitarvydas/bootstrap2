@@ -6,12 +6,12 @@ temp=temp${RANDOM}
 cat >${temp}.pl <<'~~~'
 :- use_module(library(http/json)).
 ?- consult("fb.pl").
-?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap/d2fb/das2f/shapes.pl").
-?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap/d2fb/das2f/onSameDiagram.pl").
-?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap/d2fb/das2f/inside.pl").
-?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap/d2fb/das2f/names.pl").
-?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap/d2fb/das2f/ports.pl").
-?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap/d2fb/das2f/contains.pl").
+?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap2/diagram2json/das2f/shapes.pl").
+?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap2/diagram2json/das2f/onSameDiagram.pl").
+?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap2/diagram2json/das2f/inside.pl").
+?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap2/diagram2json/das2f/names.pl").
+?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap2/diagram2json/das2f/ports.pl").
+?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap2/diagram2json/das2f/contains.pl").
 query_helper(ID,X,Y,Right,Bottom):-
 diagram_fact(x,ID,X),
 diagram_fact(y,ID,Y),

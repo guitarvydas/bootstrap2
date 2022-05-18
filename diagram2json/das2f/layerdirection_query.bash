@@ -6,9 +6,9 @@ temp=temp${RANDOM}
 cat >${temp}.pl <<'~~~'
 :- use_module(library(http/json)).
 ?- consult("fb.pl").
-?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap/d2fb/das2f/shapes.pl").
-?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap/d2fb/das2f/onSameDiagram.pl").
-?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap/d2fb/das2f/inside.pl").
+?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap2/diagram2json/das2f/shapes.pl").
+?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap2/diagram2json/das2f/onSameDiagram.pl").
+?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap2/diagram2json/das2f/inside.pl").
 query_helper(ID,Direction):-
 diagram_fact(kind,ID,"ellipse"),
 (das_fact(color, ID, "green")  -> Direction = input;das_fact(color, ID, "yellow")  -> Direction = output;das_fact(color, ID, "red")  -> Direction = pervasiveinput;das_fact(color, ID, "purple")  -> Direction = pervasiveoutput; Direction = "?"),

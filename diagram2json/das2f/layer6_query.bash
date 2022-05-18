@@ -5,11 +5,11 @@ temp=temp${RANDOM}
 cat >${temp}.pl <<'~~~'
 :- use_module(library(http/json)).
 ?- consult("fb.pl").
-?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap/d2fb/das2f/shapes.pl").
-?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap/d2fb/das2f/onSameDiagram.pl").
-?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap/d2fb/das2f/inside.pl").
-?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap/d2fb/das2f/names.pl").
-?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap/d2fb/das2f/ports.pl").
+?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap2/diagram2json/das2f/shapes.pl").
+?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap2/diagram2json/das2f/onSameDiagram.pl").
+?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap2/diagram2json/das2f/inside.pl").
+?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap2/diagram2json/das2f/names.pl").
+?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap2/diagram2json/das2f/ports.pl").
 query:-
 setof([A,B],das_fact(contains,A,B),All),
 setof([C,D],das_fact(indirect_contains,C,D),Indirect),
