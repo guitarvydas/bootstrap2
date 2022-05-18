@@ -6,11 +6,11 @@ temp=temp${RANDOM}
 cat >${temp}.pl <<'~~~'
 :- use_module(library(http/json)).
 ?- consult("fb.pl").
-?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap/d2fb/das2f/shapes.pl").
-?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap/d2fb/das2f/onSameDiagram.pl").
-?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap/d2fb/das2f/inside.pl").
-?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap/d2fb/das2f/names.pl").
-?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap/d2fb/das2f/ports.pl").
+?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap2/d2fb/das2f/shapes.pl").
+?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap2/d2fb/das2f/onSameDiagram.pl").
+?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap2/d2fb/das2f/inside.pl").
+?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap2/d2fb/das2f/names.pl").
+?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap2/d2fb/das2f/ports.pl").
 query_helper(Parent,Child):-
 das_fact(contains,Parent,X),
 das_fact(contains,X,Child),

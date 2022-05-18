@@ -6,12 +6,12 @@ temp=temp${RANDOM}
 cat >${temp}.pl <<'~~~'
 :- use_module(library(http/json)).
 ?- consult("fb.pl").
-?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap/d2fb/das2f/shapes.pl").
-?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap/d2fb/das2f/onSameDiagram.pl").
-?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap/d2fb/das2f/inside.pl").
-?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap/d2fb/das2f/names.pl").
-?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap/d2fb/das2f/ports.pl").
-?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap/d2fb/das2f/contains.pl").
+?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap2/d2fb/das2f/shapes.pl").
+?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap2/d2fb/das2f/onSameDiagram.pl").
+?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap2/d2fb/das2f/inside.pl").
+?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap2/d2fb/das2f/names.pl").
+?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap2/d2fb/das2f/ports.pl").
+?- consult("/Users/tarvydas/quicklisp/local-projects/bootstrap2/d2fb/das2f/contains.pl").
 query_helper(ID,Color):-
 diagram_fact(cell,ID,_),
 (diagram_fact(fillColor, ID, "#d5e8d4")  -> Color = "green";diagram_fact(fillColor, ID, "#fff2cc")  -> Color = "yellow";diagram_fact(fillColor, ID, "#f8cecc")  -> Color = "red";diagram_fact(fillColor, ID, "#9673A6")  -> Color = "purple"; Color = "-"),
