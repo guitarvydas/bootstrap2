@@ -18,7 +18,7 @@
       "inputs": ["go" ],
       "name":"Phrase Faker",
       "outputs": ["short phrase", "long phrase" ],
-      "synccode":"&lt;div&gt;&amp;nbsp; &amp;nbsp; me.send (&quot;long phrase&quot;, &quot;I Want A Hamburger With Ketchup And Bacon And Pickles&quot;);&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;"
+      "synccode":"&lt;div&gt;&amp;nbsp; &amp;nbsp; me.send (&quot;long phrase&quot;, &quot;I Want A Hamburger With Mustard And Cheese&quot;);&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;"
     }
   ],
   [
@@ -75,6 +75,14 @@
 	{
 	  "receivers": [ {"receiver": {"component":"Order Taker", "port":"food order"}} ],
 	  "senders": [ {"sender": {"component":"Phrase Parser", "port":"order with choices"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"Order Taker", "port":"food order"}} ],
+	  "senders": [ {"sender": {"component":"Phrase Parser", "port":"parse error"}} ]
+	},
+	{
+	  "receivers": [ {"receiver": {"component":"Order Taker", "port":"food order"}} ],
+	  "senders": [ {"sender": {"component":"Phrase Parser", "port":"hook error"}} ]
 	}
       ],
       "id":"cell_7",
