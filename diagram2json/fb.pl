@@ -387,7 +387,7 @@ diagram_fact(value, cell_27, "order with choices").
 diagram_fact(value, cell_29, "parse error").
 diagram_fact(value, cell_31, "hook error").
 diagram_fact(value, cell_32, "me.send (&quot;click&quot;, true);").
-diagram_fact(value, cell_33, "&lt;div&gt;&amp;nbsp; &amp;nbsp; me.send (&quot;long phrase&quot;, &quot;I Want A Hamburger With Mustard And Cheese&quot;);&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;").
+diagram_fact(value, cell_33, "&lt;div&gt;&amp;nbsp; &amp;nbsp; me.send (&quot;long phrase&quot;, &quot;I Want A Cheeburger With Mustard And Cheese&quot;);&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;").
 diagram_fact(value, cell_6, "Test Bench").
 diagram_fact(value, cell_7, "Order Taker").
 diagram_fact(value, cell_9, "food order").
@@ -537,7 +537,7 @@ das_fact(name, cell_27, "order with choices").
 das_fact(name, cell_29, "parse error").
 das_fact(name, cell_31, "hook error").
 das_fact(name, cell_32, "me.send (&quot;click&quot;, true);").
-das_fact(name, cell_33, "&lt;div&gt;&amp;nbsp; &amp;nbsp; me.send (&quot;long phrase&quot;, &quot;I Want A Hamburger With Mustard And Cheese&quot;);&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;").
+das_fact(name, cell_33, "&lt;div&gt;&amp;nbsp; &amp;nbsp; me.send (&quot;long phrase&quot;, &quot;I Want A Cheeburger With Mustard And Cheese&quot;);&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;").
 das_fact(name, cell_6, "Test Bench").
 das_fact(name, cell_7, "Order Taker").
 das_fact(name, cell_9, "food order").
@@ -757,7 +757,7 @@ das_fact(direct_contains,cell_6,cell_8).
 das_fact(direct_contains,cell_7,cell_10).
 
 das_fact(codebox,cell_32,"me.send (&quot;click&quot;, true);").
-das_fact(codebox,cell_33,"&lt;div&gt;&amp;nbsp; &amp;nbsp; me.send (&quot;long phrase&quot;, &quot;I Want A Hamburger With Mustard And Cheese&quot;);&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;").
+das_fact(codebox,cell_33,"&lt;div&gt;&amp;nbsp; &amp;nbsp; me.send (&quot;long phrase&quot;, &quot;I Want A Cheeburger With Mustard And Cheese&quot;);&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;").
 
 das_fact(connection, cell_7, cell_10).
 das_fact(sender, cell_10, sender{component:"Order Taker",port:"phrase"}).

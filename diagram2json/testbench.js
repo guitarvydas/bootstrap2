@@ -37,7 +37,7 @@ var Phrase_Faker_protoImplementation = {
     begin: function () {},
     finish: function () {},
     handler: function (me, message) {
-            me.send ("long phrase", "I Want A Hamburger With Mustard And Cheese");
+            me.send ("long phrase", "I Want A Cheeburger With Mustard And Cheese");
 
 
 

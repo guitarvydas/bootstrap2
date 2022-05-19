@@ -387,7 +387,7 @@ diagram_fact(value, cell_27, "order with choices").
 diagram_fact(value, cell_29, "parse error").
 diagram_fact(value, cell_31, "hook error").
 diagram_fact(value, cell_32, "me.send (&quot;click&quot;, true);").
-diagram_fact(value, cell_33, "&lt;div&gt;&amp;nbsp; &amp;nbsp; me.send (&quot;long phrase&quot;, &quot;I Want A Hamburger With Mustard And Cheese&quot;);&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;").
+diagram_fact(value, cell_33, "&lt;div&gt;&amp;nbsp; &amp;nbsp; me.send (&quot;long phrase&quot;, &quot;I Want A Cheeburger With Mustard And Cheese&quot;);&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;").
 diagram_fact(value, cell_6, "Test Bench").
 diagram_fact(value, cell_7, "Order Taker").
 diagram_fact(value, cell_9, "food order").
